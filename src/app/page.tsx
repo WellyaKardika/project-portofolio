@@ -181,10 +181,10 @@ export default function Home() {
                   </a>
                   <a
                     href="mailto:kardikawellya@gmail.com"
-                    className="flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-xs text-emerald-200 transition hover:border-emerald-400 hover:bg-emerald-500/20"
-                  >
+                    className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-zinc-200 transition hover:border-white/30 hover:bg-white/10"
+                    >
                     <PiEnvelopeSimpleBold />
-                    kardikawellya@gmail.com
+                    Email
                   </a>
                 </div>
               </div>
