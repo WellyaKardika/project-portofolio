@@ -191,17 +191,12 @@ export default function Home() {
             <div className="relative flex w-full items-center justify-center">
               <div className="pointer-events-none absolute -inset-6 rounded-[32px] bg-emerald-500/10 blur-3xl" />
                 <ProfileCard
-                  name=""
-                  title=""
-                  handle=""
                   status="Online"
                   contactText="Contact Me"
                   avatarUrl="/assets/images/profile.png"
-                  showUserInfo={false}
                   enableTilt={true}
                   enableMobileTilt={false}
                   onContactClick={() => console.log('Contact clicked')}
-                  showIcon
                   behindGlowEnabled={true}
                   behindGlowColor="rgba(125, 190, 255, 0.67)"
                   innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
