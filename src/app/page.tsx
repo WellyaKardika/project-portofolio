@@ -190,16 +190,18 @@ export default function Home() {
           <div className="relative flex flex-col items-center gap-6">
             <div className="relative flex w-full items-center justify-center">
               <div className="pointer-events-none absolute -inset-6 rounded-[32px] bg-emerald-500/10 blur-3xl" />
-                <ProfileCard
+              <ProfileCard
                   status="Online"
                   contactText="Contact Me"
                   avatarUrl="/assets/images/profile.png"
+                  behindGlowSize="500px" // Tambahkan ini (sesuaikan ukurannya)
+                  miniAvatarUrl="/assets/images/profile.png" // Tambahkan ini (bisa disamakan dengan avatarUrl)
                   enableTilt={true}
                   enableMobileTilt={false}
-                  onContactClick={() => console.log('Contact clicked')}
+                  onContactClick={() => {}} 
                   behindGlowEnabled={true}
-                  behindGlowColor="rgba(125, 190, 255, 0.67)"
-                  innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+                  behindGlowColor="#10b981"
+                  innerGradient="linear-gradient(...)"
                 />
             </div>            
           </div>
