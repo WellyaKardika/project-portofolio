@@ -96,8 +96,15 @@ function PixelTransition({
     });
 
     delayedCallRef.current = gsap.delayedCall(animationStepDuration, () => {
-      activeEl.style.display = activate ? 'block' : 'none';
-      activeEl.style.pointerEvents = activate ? 'none' : '';
+      if (activeEl) {
+        activeEl.style.display = activate ? 'block' : 'none';
+        
+        // UBAH 'none' MENJADI 'auto' agar tombol bisa di-klik
+        activeEl.style.pointerEvents = activate ? 'auto' : 'none'; 
+        
+        // Tambahkan z-index agar lapisan konten ini naik ke atas grid pixel
+        activeEl.style.zIndex = activate ? '10' : '2';
+      }
     });
 
     gsap.to(pixels, {

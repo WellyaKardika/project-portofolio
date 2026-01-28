@@ -385,18 +385,21 @@ export default function Home() {
                 {
                   title: 'Watercress',
                   image: '/assets/projects/watercress.png',
+                  link: 'https://staging.watercressbali.com/', // Tambahkan link di sini
                   summary:
                     'Modern website for a Bali-based restaurant brand, focused on menu visibility and location details.',
                 },
                 {
                   title: 'Double-Six Group',
                   image: '/assets/projects/double-six-group.png',
+                  link: 'https://staging.doublesix.group/',
                   summary:
                     'Multi-property hospitality presence with strong visual identity and clear navigation.',
                 },
                 {
                   title: 'Milk & Madu',
                   image: '/assets/projects/milk-and-madu.png',
+                  link: 'https://staging.milkandmadu.com/',
                   summary:
                     'Warm, inviting digital experience for a popular cafe brand, optimized for mobile visitors.',
                 },
@@ -434,13 +437,15 @@ export default function Home() {
                         <p className="text-sm text-zinc-300">{project.summary}</p>
                       </div>
                       <div className="mt-3">
-                        <button
-                          type="button"
-                          className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-zinc-100 transition hover:border-white/40 hover:bg-white/10"
-                        >
-                          View Project
-                        </button>
-                      </div>
+                          <a
+                            href={project.link} 
+                            target="_blank"     
+                            rel="noreferrer"    
+                            className="relative z-20 inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-zinc-100 transition hover:border-white/40 hover:bg-white/10"
+                          >
+                            View Project
+                          </a>
+                        </div>
                     </div>
                   }
                 />
