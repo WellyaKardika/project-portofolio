@@ -457,25 +457,22 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className="mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12">
           <div className="section grid gap-10 rounded-[32px] border border-white/10 bg-zinc-950/90 p-8 shadow-[0_0_60px_rgba(0,0,0,0.9)] backdrop-blur-xl lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] lg:p-12">
-            <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-950 via-black to-zinc-900">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,197,94,0.35),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(59,130,246,0.3),_transparent_55%)] opacity-80" />
-              <div className="relative z-10 h-[180px] w-full max-w-md px-4">
-                <TextPressure
-                  text="Contact Me"
-                  flex
-                  alpha={false}
-                  stroke={false}
-                  width
-                  weight
-                  italic
-                  textColor="#ffffff"
-                  strokeColor="#22c55e"
-                  minFontSize={36}
-                  className="justify-center"
-                  style={{ height: '100%' }}
-                />
-              </div>
-            </div>
+          <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden rounded-3xl bg-black">
+              <TextPressure 
+                  text="CONTACT" 
+                  flex 
+                  alpha={false} 
+                  stroke={false} 
+                  width 
+                  weight 
+                  italic 
+                  textColor="#ffffff" 
+                  strokeColor="#22c55e" 
+                  minFontSize={36}  
+                  style={{ height: '100%', width: '100%', top:100}} // Tambahkan width 100%
+                  className="flex items-center" // Tambahkan class ini
+              />
+          </div>
 
             <div className="flex flex-col justify-center gap-6">
               <div className="space-y-2">
