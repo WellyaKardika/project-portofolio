@@ -145,6 +145,24 @@ export default function Home() {
                   maintainable. I am an adaptive and responsible individual with strong problem-solving
                   abilities.
                 </p>
+                <div className="mt-6">
+  <a
+    href="/docs/CV-Wellya.pdf" // Pastikan nama file sesuai dengan yang ada di folder public
+    download="CV_Wellya_Kardika.pdf" // Memberi nama file saat diunduh oleh user
+    className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-6 py-3 text-sm font-semibold text-emerald-400 transition hover:bg-emerald-500 hover:text-black shadow-[0_0_20px_rgba(16,185,129,0.1)]"
+  >
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="20" height="20" 
+      viewBox="0 0 24 24" fill="none" 
+      stroke="currentColor" strokeWidth="2" 
+      strokeLinecap="round" strokeLinejoin="round"
+    >
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+    </svg>
+    Download CV
+  </a>
+</div>
               </div>
 
               <div className="space-y-4">
@@ -457,7 +475,7 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className="mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12">
           <div className="section grid gap-10 rounded-[32px] border border-white/10 bg-zinc-950/90 p-8 shadow-[0_0_60px_rgba(0,0,0,0.9)] backdrop-blur-xl lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] lg:p-12">
-          <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden rounded-3xl bg-black">
+          <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden rounded-3xl">
               <TextPressure 
                   text="CONTACT" 
                   flex 
