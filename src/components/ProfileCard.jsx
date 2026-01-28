@@ -427,10 +427,13 @@ const ProfileCardComponent = ({
       )}
       <div ref={shellRef} className="relative z-[1] group">
         <section
-          className="grid relative overflow-hidden backface-hidden"
+          className={`
+            grid relative overflow-hidden backface-hidden w-full 
+            h-[400px]
+            sm:h-[420px]
+            md:h-[540px]
+          `}
           style={{
-            height: '80svh',
-            maxHeight: '540px',
             aspectRatio: '0.718',
             borderRadius: cardRadius,
             backgroundBlendMode: 'color-dodge, normal, normal, normal',
