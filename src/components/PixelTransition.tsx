@@ -29,7 +29,7 @@ function PixelTransition({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const pixelGridRef = useRef<HTMLDivElement | null>(null);
   const activeRef = useRef<HTMLDivElement | null>(null);
-  const delayedCallRef = useRef<gsap.DelayedCall | null>(null);
+  const delayedCallRef = useRef<ReturnType<typeof gsap.delayedCall> | null>(null);
 
   const [isActive, setIsActive] = useState(false);
 
