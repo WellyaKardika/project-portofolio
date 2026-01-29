@@ -27,6 +27,14 @@ import ProfileCard from '../components/ProfileCard';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 import PixelTransition from '../components/PixelTransition';
 import TextPressure from '../components/TextPressure';
+import { FloatingDock } from '../components/floating-dock'; // Sesuaikan path foldernya
+import { 
+  IconHome, 
+  IconUser, 
+  IconBriefcase, 
+  IconCode, 
+  IconMessage 
+} from "@tabler/icons-react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -69,6 +77,39 @@ export default function Home() {
 
     window.location.href = `mailto:kardikawellya@gmail.com?subject=${subject}&body=${body}`;
   };
+
+  const navItems = [
+    {
+      title: "Home",
+      icon: <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      href: "#",
+    },
+    {
+      title: "About",
+      icon: <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      href: "#about",
+    },
+    {
+      title: "Experience",
+      icon: <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      href: "#experience",
+    },
+    {
+      title: "Skills",
+      icon: <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      href: "#skills",
+    },
+    {
+      title: "Projects", // Tombol baru
+      icon: <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      href: "#projects", // Merujuk ke id="projects" di line 269 file page.tsx kamu
+    },
+    {
+      title: "Contact",
+      icon: <IconMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      href: "#contact",
+    },
+  ];
 
   return (
     <div
@@ -396,6 +437,7 @@ export default function Home() {
                 A glimpse of the brands I&apos;ve supported through web design, content structuring,
                 and ongoing maintenance.
               </p>
+                              
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
@@ -469,6 +511,15 @@ export default function Home() {
                 />
               ))}
             </div>
+            <a
+                    href="https://github.com/WellyaKardika"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex  items-center justify-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-zinc-100 transition hover:border-white/40 hover:bg-white/10"
+                  >
+                    <SiGithub />
+                    View on GitHub
+                  </a>
           </div>
         </section>
 
@@ -560,6 +611,19 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* FLOATING DOCK INTEGRATION */}
+{/* Mobile: bottom-6 left-6 (Kiri)
+    Desktop (md): left-0 right-0 justify-center (Tengah)
+*/}
+          <div className="fixed bottom-6 left-6 md:left-0 md:right-0 z-[100] flex md:justify-center items-end pointer-events-none">
+            <div className="pointer-events-auto">
+              <FloatingDock 
+                items={navItems} 
+                desktopClassName="border border-white/10 shadow-2xl"
+              />
+            </div>
+          </div>
 
         <footer className="mx-auto mt-4 flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-6 text-[11px] text-zinc-500 sm:flex-row">
           <span>© {new Date().getFullYear()} I Made Wellya Supratistha Kardika.</span>
