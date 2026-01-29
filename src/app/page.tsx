@@ -613,7 +613,6 @@ export default function Home() {
         </section>
 
         {/* FLOATING DOCK INTEGRATION */}
-        
         <div className="fixed bottom-6 left-0 right-0 z-[100] flex justify-center pointer-events-none px-4">
           <div className="pointer-events-auto">
             <FloatingDock items={navItems} />
