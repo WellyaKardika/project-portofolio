@@ -81,7 +81,7 @@ export default function Home() {
       <main className="flex flex-col gap-32 pb-24">
         
         {/* HERO SECTION */}
-        <section className="section relative flex min-h-[70vh] items-center justify-center overflow-hidden">
+        <section className="section relative flex min-h-[90vh] items-center justify-center overflow-hidden">
           {/* Background ini sekarang bisa benar-benar Full Width */}
           <div className="pointer-events-none absolute inset-0 opacity-70">
             <LightRays
@@ -101,7 +101,7 @@ export default function Home() {
           {/* Kontainer Konten HERO dengan Batas Lebar */}
           <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 text-center sm:px-8 lg:px-12">
             <ScrambledText
-              className="m-0 max-w-none font-semibold leading-tight tracking-tight text-zinc-50"
+              className="m-0 max-w-none text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-zinc-50"
               radius={60}
               duration={1}
               speed={0.7}
