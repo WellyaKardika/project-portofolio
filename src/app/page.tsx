@@ -613,17 +613,12 @@ export default function Home() {
         </section>
 
         {/* FLOATING DOCK INTEGRATION */}
-{/* Mobile: bottom-6 left-6 (Kiri)
-    Desktop (md): left-0 right-0 justify-center (Tengah)
-*/}
-          <div className="fixed bottom-6 left-6 md:left-0 md:right-0 z-[100] flex md:justify-center items-end pointer-events-none">
-            <div className="pointer-events-auto">
-              <FloatingDock 
-                items={navItems} 
-                desktopClassName="border border-white/10 shadow-2xl"
-              />
-            </div>
+        
+        <div className="fixed bottom-6 left-0 right-0 z-[100] flex justify-center pointer-events-none px-4">
+          <div className="pointer-events-auto">
+            <FloatingDock items={navItems} />
           </div>
+        </div>
 
         <footer className="mx-auto mt-4 flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-6 text-[11px] text-zinc-500 sm:flex-row">
           <span>© {new Date().getFullYear()} I Made Wellya Supratistha Kardika.</span>
