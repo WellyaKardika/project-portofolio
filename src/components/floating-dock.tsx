@@ -44,13 +44,12 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            // UBAH: inset-x-0 jadi left-0, dan arahkan flex-col ke start
             className="absolute left-0 bottom-full mb-4 flex flex-col gap-3 items-start"
           >
             {items.map((item, idx) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, x: -20 }} // Muncul dari kiri
+                initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{
                   opacity: 0,
@@ -61,6 +60,8 @@ const FloatingDockMobile = ({
               >
                 <a
                   href={item.href}
+                  // TAMBAHKAN: onClick={() => setOpen(false)}
+                  onClick={() => setOpen(false)}
                   className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 backdrop-blur-md dark:bg-black/40"
                 >
                   <div className="h-6 w-6">{item.icon}</div>
@@ -70,7 +71,6 @@ const FloatingDockMobile = ({
           </motion.div>
         )}
       </AnimatePresence>
-      
       <button
         onClick={() => setOpen(!open)}
         className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 backdrop-blur-md dark:bg-black/40 shadow-lg"
