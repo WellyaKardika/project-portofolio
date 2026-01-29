@@ -32,7 +32,8 @@ import {
   IconHome, 
   IconUser, 
   IconBriefcase, 
-  IconCode, 
+  IconCode,
+  IconRocket, 
   IconMessage 
 } from "@tabler/icons-react";
 
@@ -101,7 +102,7 @@ export default function Home() {
     },
     {
       title: "Projects", // Tombol baru
-      icon: <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconRocket className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
       href: "#projects", // Merujuk ke id="projects" di line 269 file page.tsx kamu
     },
     {
