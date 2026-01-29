@@ -214,9 +214,9 @@ export default function Home() {
                 <ProfileCard
                     status="Online"
                     contactText="Contact Me"
-                    avatarUrl="/assets/images/profile.png"
+                    avatarUrl="/assets/images/profile.webp"
                     behindGlowSize="500px" 
-                    miniAvatarUrl="/assets/images/profile.png" 
+                    miniAvatarUrl="/assets/images/profile.webp" 
                     enableTilt={true}
                     enableMobileTilt={false}
                     onContactClick={() => {}} 
@@ -402,21 +402,21 @@ export default function Home() {
               {[
                 {
                   title: 'Watercress',
-                  image: '/assets/projects/watercress.png',
-                  link: 'https://staging.watercressbali.com/', // Tambahkan link di sini
+                  image: '/assets/projects/watercress.webp',
+                  link: 'https://staging.watercressbali.com/',
                   summary:
                     'Modern website for a Bali-based restaurant brand, focused on menu visibility and location details.',
                 },
                 {
                   title: 'Double-Six Group',
-                  image: '/assets/projects/double-six-group.png',
+                  image: '/assets/projects/double-six-group.webp',
                   link: 'https://staging.doublesix.group/',
                   summary:
                     'Multi-property hospitality presence with strong visual identity and clear navigation.',
                 },
                 {
                   title: 'Milk & Madu',
-                  image: '/assets/projects/milk-and-madu.png',
+                  image: '/assets/projects/milk-and-madu.webp',
                   link: 'https://staging.milkandmadu.com/',
                   summary:
                     'Warm, inviting digital experience for a popular cafe brand, optimized for mobile visitors.',
