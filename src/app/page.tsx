@@ -103,9 +103,9 @@ export default function Home() {
       href: "#skills",
     },
     {
-      title: "Projects", // Tombol baru
+      title: "Projects", 
       icon: <IconRocket className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#projects", // Merujuk ke id="projects" di line 269 file page.tsx kamu
+      href: "#projects", 
     },
     {
       title: "Contact",
@@ -120,16 +120,12 @@ export default function Home() {
       className="min-h-screen bg-black text-zinc-50 antialiased selection:bg-zinc-50 selection:text-black"
     >
       <IntroAnimation onComplete={() => setShowContent(true)} />
-
-      {/* Main tidak lagi menggunakan max-w-6xl agar elemen background bisa full width.
-          Batas lebar 6xl dipindahkan ke dalam masing-masing container konten.
-      */}
       {showContent && (
         <main className="flex flex-col gap-32 pb-24">
 
           {/* HERO SECTION */}
           <section className="section relative flex min-h-[90vh] items-center justify-center overflow-hidden animate-fade-in">
-            {/* Background ini sekarang bisa benar-benar Full Width */}
+         
             <div className="pointer-events-none absolute inset-0 opacity-70">
               <LightRays
                 raysOrigin="top-center"
@@ -145,7 +141,6 @@ export default function Home() {
               />
             </div>
 
-            {/* Kontainer Konten HERO dengan Batas Lebar */}
             <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 text-center sm:px-8 lg:px-12">
               <ScrambledText
                 className="m-0 max-w-none text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-zinc-50"
@@ -158,8 +153,7 @@ export default function Home() {
               </ScrambledText>
 
               <p className="max-w-xl text-sm text-zinc-400 sm:text-base">
-                I design and build modern web experiences with Next.js, PHP, and WordPress – bridging
-                clean interfaces, reliable infrastructure, and thoughtful UX.
+                Currently, I’m working as a Web Developer at PT. Bali 66 Citra Persada (Double Six Group), focusing on website development and maintenance.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm">
@@ -172,15 +166,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Gradient overlay for smooth transition to next section */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent via-black/50 to-black" />
           </section>
 
-          {/* ABOUT SECTION */}
           <section id="about" className="relative mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12">
-            {/* Gradient overlay for smooth transition from previous section */}
             <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-gradient-to-b from-black via-black/50 to-transparent blur-2xl" />
-            {/* Perbaikan Responsif: grid-cols-1 untuk mobile, md:grid-cols-2 untuk desktop */}
             <div className="section grid grid-cols-1 gap-10 rounded-[32px] border border-white/10 bg-zinc-950/80 p-8 shadow-[0_0_60px_rgba(0,0,0,0.9)] backdrop-blur-xl md:grid-cols-2 lg:p-12">
               <div className="flex flex-col justify-between gap-8">
                 <div className="space-y-4">
@@ -199,8 +189,8 @@ export default function Home() {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="/docs/CV-Wellya.pdf" // Pastikan nama file sesuai dengan yang ada di folder public
-                      download="CV_Wellya_Kardika.pdf" // Memberi nama file saat diunduh oleh user
+                      href="/docs/CV-Wellya.pdf" 
+                      download="CV_Wellya_Kardika.pdf" 
                       className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-6 py-3 text-sm font-semibold text-emerald-400 transition hover:bg-emerald-500 hover:text-black shadow-[0_0_20px_rgba(16,185,129,0.1)]"
                     >
                       <svg
@@ -289,11 +279,10 @@ export default function Home() {
                   Experience
                 </p>
                 <h2 className="text-2xl font-semibold text-zinc-50 sm:text-3xl">
-                  Hands-on roles in web and IT.
+                  Hands-on roles in the IT industry.
                 </h2>
-                <p className="max-w-2xl text-sm text-zinc-400 sm:text-base">
-                  From crafting WordPress sites to supporting government networks and managing system
-                  transitions, I bring practical experience across development and IT operations.
+                <p className="max-w-5xl text-sm text-zinc-400 sm:text-base">
+                  From developing WordPress websites to supporting networks and assisting in system transitions and data migrations, I bring practical experience across development and IT operations.
                 </p>
               </div>
             </div>
@@ -389,8 +378,7 @@ export default function Home() {
                   Tools I use to ship robust experiences.
                 </h2>
                 <p className="text-sm text-zinc-400 sm:text-base">
-                  From PHP backends to modern React frontends, I&apos;m comfortable moving across the
-                  stack and collaborating with teams on real-world projects.
+                  From PHP backends to modern React frontends, I’m comfortable adapting to different technologies and collaborating with teams on real-world projects.
                 </p>
 
                 <div className="mt-4 space-y-2 text-sm text-zinc-300">
@@ -569,10 +557,9 @@ export default function Home() {
                     height: '100%',
                     width: '100%',
                     position: 'relative',
-                    // Gunakan logika: di mobile top nya kecil, di desktop baru lebih besar
                     top: typeof window !== 'undefined' && window.innerWidth < 1024 ? '20px' : '80px'
                   }}
-                  className="flex items-center" // Tambahkan class ini
+                  className="flex items-center" 
                 />
               </div>
 
