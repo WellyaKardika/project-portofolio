@@ -117,10 +117,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -131,6 +133,7 @@ html {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -139,4 +142,22 @@ html {
 
 .animate-fade-in {
   animation: fadeIn 1s ease-out forwards;
+}
+
+/* Delayed fade-in animation for floating dock */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-delayed {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.5s forwards;
 }
