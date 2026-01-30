@@ -478,7 +478,7 @@ export default function Home() {
                   image: '/assets/projects/kos-kardika.webp',
                   link: 'https://github.com/WellyaKardika/Kos-kardika',
                   summary:
-                    'Information system tracking room availability and rentals via a dashboard. Built with Laravel 12 and Filament.',
+                    'Room availability and rental tracking system built with Laravel 12 and Filament.',
                 },
               ].map(project => (
                 <PixelTransition
