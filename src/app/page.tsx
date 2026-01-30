@@ -171,10 +171,15 @@ export default function Home() {
                 </span>
               </div>
             </div>
+
+            {/* Gradient overlay for smooth transition to next section */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent via-black/50 to-black" />
           </section>
 
           {/* ABOUT SECTION */}
-          <section id="about" className="mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12">
+          <section id="about" className="relative mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12">
+            {/* Gradient overlay for smooth transition from previous section */}
+            <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-gradient-to-b from-black via-black/50 to-transparent blur-2xl" />
             {/* Perbaikan Responsif: grid-cols-1 untuk mobile, md:grid-cols-2 untuk desktop */}
             <div className="section grid grid-cols-1 gap-10 rounded-[32px] border border-white/10 bg-zinc-950/80 p-8 shadow-[0_0_60px_rgba(0,0,0,0.9)] backdrop-blur-xl md:grid-cols-2 lg:p-12">
               <div className="flex flex-col justify-between gap-8">
