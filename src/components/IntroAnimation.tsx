@@ -7,7 +7,7 @@ interface IntroAnimationProps {
   onComplete: () => void;
 }
 
-const GREETINGS = ['Hello', 'Bonjour', 'Ciao', 'Olá', 'Hallo', 'नमस्ते'];
+const GREETINGS = ['Hello', 'Bonjour', 'Olá','こんにちは', 'नमस्ते', 'Halo'];
 
 export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
