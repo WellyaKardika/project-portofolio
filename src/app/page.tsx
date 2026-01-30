@@ -28,13 +28,13 @@ import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 import PixelTransition from '../components/PixelTransition';
 import TextPressure from '../components/TextPressure';
 import { FloatingDock } from '../components/floating-dock'; // Sesuaikan path foldernya
-import { 
-  IconHome, 
-  IconUser, 
-  IconBriefcase, 
+import {
+  IconHome,
+  IconUser,
+  IconBriefcase,
   IconCode,
-  IconRocket, 
-  IconMessage 
+  IconRocket,
+  IconMessage
 } from "@tabler/icons-react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -121,7 +121,7 @@ export default function Home() {
           Batas lebar 6xl dipindahkan ke dalam masing-masing container konten.
       */}
       <main className="flex flex-col gap-32 pb-24">
-        
+
         {/* HERO SECTION */}
         <section className="section relative flex min-h-[90vh] items-center justify-center overflow-hidden">
           {/* Background ini sekarang bisa benar-benar Full Width */}
@@ -188,23 +188,23 @@ export default function Home() {
                   abilities.
                 </p>
                 <div className="mt-6">
-  <a
-    href="/docs/CV-Wellya.pdf" // Pastikan nama file sesuai dengan yang ada di folder public
-    download="CV_Wellya_Kardika.pdf" // Memberi nama file saat diunduh oleh user
-    className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-6 py-3 text-sm font-semibold text-emerald-400 transition hover:bg-emerald-500 hover:text-black shadow-[0_0_20px_rgba(16,185,129,0.1)]"
-  >
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="20" height="20" 
-      viewBox="0 0 24 24" fill="none" 
-      stroke="currentColor" strokeWidth="2" 
-      strokeLinecap="round" strokeLinejoin="round"
-    >
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
-    </svg>
-    Download CV
-  </a>
-</div>
+                  <a
+                    href="/docs/CV-Wellya.pdf" // Pastikan nama file sesuai dengan yang ada di folder public
+                    download="CV_Wellya_Kardika.pdf" // Memberi nama file saat diunduh oleh user
+                    className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-6 py-3 text-sm font-semibold text-emerald-400 transition hover:bg-emerald-500 hover:text-black shadow-[0_0_20px_rgba(16,185,129,0.1)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20" height="20"
+                      viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" strokeWidth="2"
+                      strokeLinecap="round" strokeLinejoin="round"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" x2="12" y1="15" y2="3" />
+                    </svg>
+                    Download CV
+                  </a>
+                </div>
               </div>
 
               <div className="space-y-4">
@@ -242,7 +242,7 @@ export default function Home() {
                   <a
                     href="mailto:kardikawellya@gmail.com"
                     className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-zinc-200 transition hover:border-white/30 hover:bg-white/10"
-                    >
+                  >
                     <PiEnvelopeSimpleBold />
                     Email
                   </a>
@@ -254,19 +254,19 @@ export default function Home() {
               <div className="relative flex w-full items-center justify-center">
                 <div className="pointer-events-none absolute -inset-6 rounded-[32px] bg-emerald-500/10 blur-3xl" />
                 <ProfileCard
-                    status="Online"
-                    contactText="Contact Me"
-                    avatarUrl="/assets/images/profile.webp"
-                    behindGlowSize="500px" 
-                    miniAvatarUrl="/assets/images/profile.webp" 
-                    enableTilt={true}
-                    enableMobileTilt={false}
-                    onContactClick={() => {}} 
-                    behindGlowEnabled={true}
-                    behindGlowColor="#10b981"
-                    innerGradient="linear-gradient(...)"
-                  />
-              </div>            
+                  status="Online"
+                  contactText="Contact Me"
+                  avatarUrl="/assets/images/profile.webp"
+                  behindGlowSize="500px"
+                  miniAvatarUrl="/assets/images/profile.webp"
+                  enableTilt={true}
+                  enableMobileTilt={false}
+                  onContactClick={() => { }}
+                  behindGlowEnabled={true}
+                  behindGlowColor="#10b981"
+                  innerGradient="linear-gradient(...)"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -303,6 +303,9 @@ export default function Home() {
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
                       PT. Bali 66 Citra Persada
                     </p>
+                    <p className="text-xs uppercase  text-zinc-400">
+                      Nov 2025 - Present
+                    </p>
                     <h3 className="text-xl font-semibold text-zinc-50">
                       IT Developer – WordPress
                     </h3>
@@ -321,7 +324,10 @@ export default function Home() {
                 <div className="flex h-full flex-col justify-between">
                   <div className="space-y-2">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">
-                      Diskominfo Badung
+                      Dinas Komunikasi dan Informatika Command Center Kabupaten Badung
+                    </p>
+                    <p className="text-xs uppercase  text-zinc-400">
+                      Aug 2024 - Jan 2025
                     </p>
                     <h3 className="text-xl font-semibold text-zinc-50">
                       IT Support Technician Intern
@@ -341,6 +347,9 @@ export default function Home() {
                   <div className="space-y-2">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
                       Koperasi Kresna Dana Mandiri
+                    </p>
+                    <p className="text-xs uppercase  text-zinc-400">
+                      Dec 2023 - Feb 2024
                     </p>
                     <h3 className="text-xl font-semibold text-zinc-50">
                       IT &amp; Admin Support Intern
@@ -438,7 +447,7 @@ export default function Home() {
                 A glimpse of the brands I&apos;ve supported through web design, content structuring,
                 and ongoing maintenance.
               </p>
-                              
+
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
@@ -463,6 +472,13 @@ export default function Home() {
                   link: 'https://staging.milkandmadu.com/',
                   summary:
                     'Warm, inviting digital experience for a popular cafe brand, optimized for mobile visitors.',
+                },
+                {
+                  title: 'Information System Kos Kardika',
+                  image: '/assets/projects/kos-kardika.webp',
+                  link: 'https://github.com/WellyaKardika/Kos-kardika',
+                  summary:
+                    'Information system tracking room availability and rentals via a dashboard. Built with Laravel 12 and Filament.',
                 },
               ].map(project => (
                 <PixelTransition
@@ -494,55 +510,61 @@ export default function Home() {
                         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-400">
                           Case Study
                         </p>
-                        <p className="text-lg font-semibold text-zinc-50">{project.title}</p>
+                        <p className="text-md font-semibold text-zinc-50">{project.title}</p>
                         <p className="text-sm text-zinc-300">{project.summary}</p>
                       </div>
                       <div className="mt-3">
-                          <a
-                            href={project.link} 
-                            target="_blank"     
-                            rel="noreferrer"    
-                            className="relative z-20 inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-zinc-100 transition hover:border-white/40 hover:bg-white/10"
-                          >
-                            View Project
-                          </a>
-                        </div>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="relative z-20 inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-zinc-100 transition hover:border-white/40 hover:bg-white/10"
+                        >
+                          View Project
+                        </a>
+                      </div>
                     </div>
                   }
                 />
               ))}
             </div>
             <a
-                    href="https://github.com/WellyaKardika"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex  items-center justify-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-zinc-100 transition hover:border-white/40 hover:bg-white/10"
-                  >
-                    <SiGithub />
-                    View on GitHub
-                  </a>
+              href="https://github.com/WellyaKardika"
+              target="_blank"
+              rel="noreferrer"
+              className="flex gap-2 items-center justify-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium text-zinc-100 transition hover:border-white/40 hover:bg-white/10"
+            >
+              <SiGithub />
+              See more on GitHub
+            </a>
           </div>
         </section>
 
         {/* CONTACT SECTION */}
         <section id="contact" className="mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12">
           <div className="section grid gap-10 rounded-[32px] border border-white/10 bg-zinc-950/90 p-8 shadow-[0_0_60px_rgba(0,0,0,0.9)] backdrop-blur-xl lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] lg:p-12">
-          <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden rounded-3xl">
-              <TextPressure 
-                  text="CONTACT" 
-                  flex 
-                  alpha={false} 
-                  stroke={false} 
-                  width 
-                  weight 
-                  italic 
-                  textColor="#ffffff" 
-                  strokeColor="#22c55e" 
-                  minFontSize={36}  
-                  style={{ height: '100%', width: '100%', top:100}} // Tambahkan width 100%
-                  className="flex items-center" // Tambahkan class ini
+            <div className="relative flex min-h-[260px] items-center justify-center overflow-hidden rounded-3xl">
+              <TextPressure
+                text="CONTACT"
+                flex
+                alpha={false}
+                stroke={false}
+                width
+                weight
+                italic
+                textColor="#ffffff"
+                strokeColor="#22c55e"
+                minFontSize={36}
+                style={{
+                  height: '100%',
+                  width: '100%',
+                  position: 'relative',
+                  // Gunakan logika: di mobile top nya kecil, di desktop baru lebih besar
+                  top: typeof window !== 'undefined' && window.innerWidth < 1024 ? '20px' : '80px'
+                }}
+                className="flex items-center" // Tambahkan class ini
               />
-          </div>
+            </div>
 
             <div className="flex flex-col justify-center gap-6">
               <div className="space-y-2">

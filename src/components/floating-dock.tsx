@@ -70,31 +70,36 @@ function IconContainer({
   href: string;
 }) {
   let ref = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    // Deteksi apakah perangkat menggunakan layar sentuh (Mobile/iPad/Tablet)
+    const checkTouch = () => {
+      setIsTouchDevice(
+        window.matchMedia("(pointer: coarse)").matches || 
+        window.innerWidth < 1024 // Angka 1024 mencakup sebagian besar iPad
+      );
+    };
+    
+    checkTouch();
+    window.addEventListener('resize', checkTouch);
+    return () => window.removeEventListener('resize', checkTouch);
   }, []);
 
   let distance = useTransform(mouseX, (val) => {
-    if (isMobile) return Infinity; 
+    // Jika perangkat sentuh (termasuk iPad), matikan kalkulasi jarak
+    if (isTouchDevice) return Infinity; 
+    
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
 
-  // PERBAIKAN: Ukuran dasar di mobile 40px, desktop 40px (ke 80px saat hover)
+  // Nilai transformasi tetap sama, tapi tidak akan terpicu jika isTouchDevice true
   let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
   let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-  let heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
 
   let width = useSpring(widthTransform, { mass: 0.1, stiffness: 150, damping: 12 });
   let height = useSpring(heightTransform, { mass: 0.1, stiffness: 150, damping: 12 });
-  let widthIcon = useSpring(widthTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
-  let heightIcon = useSpring(heightTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
 
   const [hovered, setHovered] = useState(false);
 
@@ -102,17 +107,18 @@ function IconContainer({
     <a href={href}>
       <motion.div
         ref={ref}
-        // PERBAIKAN: Gunakan ukuran yang lebih kecil dan konsisten di mobile
         style={{ 
-          width: isMobile ? 38 : width, 
-          height: isMobile ? 38 : height 
+          // Gunakan ukuran statis 40px jika di iPad/Mobile
+          width: isTouchDevice ? 40 : width, 
+          height: isTouchDevice ? 40 : height 
         }}
-        onMouseEnter={() => !isMobile && setHovered(true)}
+        onMouseEnter={() => !isTouchDevice && setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="relative flex aspect-square items-center justify-center rounded-full border border-white/5 bg-white/10 backdrop-blur-sm transition-colors hover:bg-white/20 dark:bg-neutral-800/50"
       >
         <AnimatePresence>
-          {hovered && !isMobile && (
+          {/* Tooltip dimatikan untuk iPad/Mobile */}
+          {hovered && !isTouchDevice && (
             <motion.div
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
@@ -123,15 +129,9 @@ function IconContainer({
             </motion.div>
           )}
         </AnimatePresence>
-        <motion.div
-          style={{ 
-            width: isMobile ? 18 : widthIcon, 
-            height: isMobile ? 18 : heightIcon 
-          }}
-          className="flex items-center justify-center text-white"
-        >
+        <div className="flex h-5 w-5 items-center justify-center text-white">
           {icon}
-        </motion.div>
+        </div>
       </motion.div>
     </a>
   );
