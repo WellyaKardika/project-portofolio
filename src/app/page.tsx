@@ -22,12 +22,11 @@ import { PiEnvelopeSimpleBold } from 'react-icons/pi';
 
 import LightRays from '../components/LightRays';
 import ScrambledText from '../components/ScrambledText';
-// import Lanyard from '../components/Lanyard';
 import ProfileCard from '../components/ProfileCard';
 import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 import PixelTransition from '../components/PixelTransition';
 import TextPressure from '../components/TextPressure';
-import { FloatingDock } from '../components/floating-dock'; // Sesuaikan path foldernya
+import { FloatingDock } from '../components/floating-dock';
 import IntroAnimation from '../components/IntroAnimation';
 import {
   IconHome,
@@ -103,9 +102,9 @@ export default function Home() {
       href: "#skills",
     },
     {
-      title: "Projects", 
+      title: "Projects",
       icon: <IconRocket className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      href: "#projects", 
+      href: "#projects",
     },
     {
       title: "Contact",
@@ -121,11 +120,11 @@ export default function Home() {
     >
       <IntroAnimation onComplete={() => setShowContent(true)} />
       {showContent && (
-        <main className="flex flex-col gap-32 pb-24">
+        <main className="flex flex-col gap-13 md:gap-16 lg:gap-32 pb-24">
 
           {/* HERO SECTION */}
           <section className="section relative flex min-h-[90vh] items-center justify-center overflow-hidden animate-fade-in">
-         
+
             <div className="pointer-events-none absolute inset-0 opacity-70">
               <LightRays
                 raysOrigin="top-center"
@@ -160,15 +159,15 @@ export default function Home() {
                 <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-zinc-200 backdrop-blur">
                   Web Development · IT Support · UI/UX
                 </span>
-                <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-300 backdrop-blur">
+                {/* <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-300 backdrop-blur">
                   Based in Bali · Open to Opportunities
-                </span>
+                </span> */}
               </div>
             </div>
-
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent via-black/50 to-black" />
           </section>
 
+          {/* ABOUT SECTION */}
           <section id="about" className="relative mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12">
             <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-gradient-to-b from-black via-black/50 to-transparent blur-2xl" />
             <div className="section grid grid-cols-1 gap-10 rounded-[32px] border border-white/10 bg-zinc-950/80 p-8 shadow-[0_0_60px_rgba(0,0,0,0.9)] backdrop-blur-xl md:grid-cols-2 lg:p-12">
@@ -189,8 +188,8 @@ export default function Home() {
                   </p>
                   <div className="mt-6">
                     <a
-                      href="/docs/CV-Wellya.pdf" 
-                      download="CV_Wellya_Kardika.pdf" 
+                      href="/docs/CV-Wellya.pdf"
+                      download="CV_Wellya_Kardika.pdf"
                       className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-6 py-3 text-sm font-semibold text-emerald-400 transition hover:bg-emerald-500 hover:text-black shadow-[0_0_20px_rgba(16,185,129,0.1)]"
                     >
                       <svg
@@ -323,7 +322,7 @@ export default function Home() {
                   <div className="flex h-full flex-col justify-between">
                     <div className="space-y-2">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">
-                        Dinas Komunikasi dan Informatika Command Center Kabupaten Badung
+                        Diskominfo Kabupaten Badung
                       </p>
                       <p className="text-xs uppercase  text-zinc-400">
                         Aug 2024 - Jan 2025
@@ -368,7 +367,7 @@ export default function Home() {
           </section>
 
           {/* TECH STACK SECTION */}
-          <section id="skills" className="mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12">
+          <section id="skills" className="mx-auto w-full max-w-6xl px-4 sm:px-8 lg:px-12 mt-24">
             <div className="section grid gap-10 rounded-[32px] border border-white/10 bg-zinc-950/80 p-8 shadow-[0_0_60px_rgba(0,0,0,0.9)] backdrop-blur-xl lg:grid-cols-[1.1fr_minmax(0,1.2fr)] lg:p-12">
               <div className="space-y-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
@@ -478,6 +477,13 @@ export default function Home() {
                     summary:
                       'Room availability and rental tracking system built with Laravel 12 and Filament.',
                   },
+                  {
+                    title: 'UI/UX E-commerce Project',
+                    image: '/assets/projects/Interactive-Design-Analysis.webp',
+                    link: 'https://www.figma.com/proto/He9uUkHl0NVW2O0iOsBP7K/Electro?page-id=0%3A1&node-id=1-2&p=f&viewport=558%2C498%2C0.09&t=Qbytm9HN9opRXtce-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2',
+                    summary:
+                      'UI/UX E-commerce Project for Interactive Design Analysis course, focusing on user flow optimization.',
+                  },
                 ].map(project => (
                   <PixelTransition
                     key={project.title}
@@ -559,7 +565,7 @@ export default function Home() {
                     position: 'relative',
                     top: typeof window !== 'undefined' && window.innerWidth < 1024 ? '20px' : '80px'
                   }}
-                  className="flex items-center" 
+                  className="flex items-center"
                 />
               </div>
 

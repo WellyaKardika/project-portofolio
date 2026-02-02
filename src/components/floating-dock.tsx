@@ -21,9 +21,9 @@ export const FloatingDock = ({
   mobileClassName?: string;
 }) => {
   return (
-    <FloatingDockContainer 
-      items={items} 
-      className={cn(desktopClassName, mobileClassName)} 
+    <FloatingDockContainer
+      items={items}
+      className={cn(desktopClassName, mobileClassName)}
     />
   );
 };
@@ -47,7 +47,7 @@ const FloatingDockContainer = ({
         "mx-auto flex items-end justify-center rounded-2xl shadow-2xl border border-white/10 bg-white/5 backdrop-blur-lg dark:bg-black/20",
         "h-14 px-3 pb-2 gap-2", // Mobile: Tinggi lebih pendek, gap kecil
         "md:h-16 md:px-4 md:pb-3 md:gap-4", // Desktop: Ukuran normal
-        "w-max", 
+        "w-max",
         className
       )}
     >
@@ -76,11 +76,11 @@ function IconContainer({
     // Deteksi apakah perangkat menggunakan layar sentuh (Mobile/iPad/Tablet)
     const checkTouch = () => {
       setIsTouchDevice(
-        window.matchMedia("(pointer: coarse)").matches || 
+        window.matchMedia("(pointer: coarse)").matches ||
         window.innerWidth < 1024 // Angka 1024 mencakup sebagian besar iPad
       );
     };
-    
+
     checkTouch();
     window.addEventListener('resize', checkTouch);
     return () => window.removeEventListener('resize', checkTouch);
@@ -88,8 +88,8 @@ function IconContainer({
 
   let distance = useTransform(mouseX, (val) => {
     // Jika perangkat sentuh (termasuk iPad), matikan kalkulasi jarak
-    if (isTouchDevice) return Infinity; 
-    
+    if (isTouchDevice) return Infinity;
+
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
@@ -107,10 +107,10 @@ function IconContainer({
     <a href={href}>
       <motion.div
         ref={ref}
-        style={{ 
+        style={{
           // Gunakan ukuran statis 40px jika di iPad/Mobile
-          width: isTouchDevice ? 40 : width, 
-          height: isTouchDevice ? 40 : height 
+          width: isTouchDevice ? 40 : width,
+          height: isTouchDevice ? 40 : height
         }}
         onMouseEnter={() => !isTouchDevice && setHovered(true)}
         onMouseLeave={() => setHovered(false)}
