@@ -484,6 +484,13 @@ export default function Home() {
                     summary:
                       'UI/UX E-commerce Project for Interactive Design Analysis course, focusing on user flow optimization.',
                   },
+                  {
+                    title: 'Mapandes - Online Invitation',
+                    image: '/assets/projects/undangan-online.webp',
+                    link: 'https://github.com/WellyaKardika/Undangan-online',
+                    summary:
+                      'Interactive digital invitation website . Built with HTML5, CSS3, and JavaScript.',
+                  },
                 ].map(project => (
                   <PixelTransition
                     key={project.title}
