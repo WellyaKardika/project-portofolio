@@ -452,21 +452,21 @@ export default function Home() {
                   {
                     title: 'Watercress',
                     image: '/assets/projects/watercress.webp',
-                    link: 'https://staging.watercressbali.com/',
+                    link: 'https://watercressbali.com/',
                     summary:
                       'Modern website for a Bali-based restaurant brand, focused on menu visibility and location details.',
                   },
                   {
                     title: 'Double-Six Group',
                     image: '/assets/projects/double-six-group.webp',
-                    link: 'https://staging.doublesix.group/',
+                    link: 'https://doublesix.group/',
                     summary:
                       'Multi-property hospitality presence with strong visual identity and clear navigation.',
                   },
                   {
                     title: 'Milk & Madu',
                     image: '/assets/projects/milk-and-madu.webp',
-                    link: 'https://staging.milkandmadu.com/',
+                    link: 'https://milkandmadu.com/',
                     summary:
                       'Warm, inviting digital experience for a popular cafe brand, optimized for mobile visitors.',
                   },
