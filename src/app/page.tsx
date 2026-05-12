@@ -450,6 +450,20 @@ export default function Home() {
               <div className="grid gap-6 md:grid-cols-3">
                 {[
                   {
+                    title: 'Cocoon Beach Club',
+                    image: '/assets/projects/cocoon.webp',
+                    link: 'https://cocoon-beach.com/',
+                    summary:
+                      'Migrated the entire site from Oxygen Builder to Elementor, rebuilding all pages while preserving the tropical beach-club aesthetic and improving editor usability.',
+                  },
+                  {
+                    title: 'The Common Bali',
+                    image: '/assets/projects/thecommon.webp',
+                    link: 'https://thecommonbali.com/',
+                    summary:
+                      'Built a modern, minimalist website tailored to the client\'s brief — clean monochrome branding over immersive full-screen lifestyle imagery.',
+                  },
+                  {
                     title: 'Watercress',
                     image: '/assets/projects/watercress.webp',
                     link: 'https://watercressbali.com/',
@@ -471,7 +485,7 @@ export default function Home() {
                       'Warm, inviting digital experience for a popular cafe brand, optimized for mobile visitors.',
                   },
                   {
-                    title: 'Information System Kos Kardika',
+                    title: 'Information System Kos',
                     image: '/assets/projects/kos-kardika.webp',
                     link: 'https://github.com/WellyaKardika/Kos-kardika',
                     summary:
